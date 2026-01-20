@@ -9,6 +9,7 @@ app.use(helmet.noSniff());
 app.use(helmet.ieNoOpen());
 const timeinseconds = 90 *24 *60 *60;
 app.use(helmet.hsts({maxAge: timeinseconds, force: true}));
+app.use( helmet.dnsPrefetchControl());
 
 
 
